@@ -1,0 +1,9 @@
+# environment variables:
+AFL_CUSTOM_INFO_PROGRAM=./bzip2_fuzz
+AFL_CUSTOM_INFO_PROGRAM_ARGV=-k -f -d @@
+AFL_CUSTOM_INFO_OUT=out_decompress2/default
+AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES=1
+AFL_TRY_AFFINITY=1
+AFL_SKIP_CPUFREQ=1
+# command line:
+'afl-fuzz' '-i' 'seeds_decompress' '-o' 'out_decompress2' '--' './bzip2_fuzz' '-k' '-f' '-d' '@@'

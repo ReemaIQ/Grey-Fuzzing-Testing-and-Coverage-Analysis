@@ -1,0 +1,10 @@
+digraph "CFG for 'BZ2_bzerror' function" {
+	label="CFG for 'BZ2_bzerror' function";
+
+	Node0xbff3d4e10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{2:\l|  %3 = alloca ptr, align 8\l  %4 = alloca ptr, align 8\l  %5 = alloca i32, align 4\l  store ptr %0, ptr %3, align 8\l  store ptr %1, ptr %4, align 8\l  %6 = load ptr, ptr %3, align 8, !dbg !10294\l  %7 = getelementptr inbounds nuw %struct.bzFile, ptr %6, i32 0, i32 5, !dbg\l... !10295\l  %8 = load i32, ptr %7, align 8, !dbg !10295\l  store i32 %8, ptr %5, align 4, !dbg !10293\l  %9 = load i32, ptr %5, align 4, !dbg !10296\l  %10 = icmp sgt i32 %9, 0, !dbg !10298\l  br i1 %10, label %11, label %12, !dbg !10298\l|{<s0>T|<s1>F}}"];
+	Node0xbff3d4e10:s0 -> Node0xbff3d4e60;
+	Node0xbff3d4e10:s1 -> Node0xbff3d4eb0;
+	Node0xbff3d4e60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70", fontname="Courier",label="{11:\l|  store i32 0, ptr %5, align 4, !dbg !10299\l  br label %12, !dbg !10300\l}"];
+	Node0xbff3d4e60 -> Node0xbff3d4eb0;
+	Node0xbff3d4eb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{12:\l|  %13 = load i32, ptr %5, align 4, !dbg !10301\l  %14 = load ptr, ptr %4, align 8, !dbg !10302\l  store i32 %13, ptr %14, align 4, !dbg !10303\l  %15 = load i32, ptr %5, align 4, !dbg !10304\l  %16 = mul nsw i32 %15, -1, !dbg !10305\l  %17 = sext i32 %16 to i64, !dbg !10306\l  %18 = getelementptr inbounds [16 x ptr], ptr @bzerrorstrings, i64 0, i64\l... %17, !dbg !10306\l  %19 = load ptr, ptr %18, align 8, !dbg !10306\l  ret ptr %19, !dbg !10307\l}"];
+}

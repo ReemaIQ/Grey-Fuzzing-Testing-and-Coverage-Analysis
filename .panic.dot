@@ -1,0 +1,5 @@
+digraph "CFG for 'panic' function" {
+	label="CFG for 'panic' function";
+
+	Node0xbff46cc80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{1:\l|  %2 = alloca ptr, align 8\l  store ptr %0, ptr %2, align 8\l  %3 = load ptr, ptr @__stderrp, align 8, !dbg !14052\l  %4 = load ptr, ptr @progName, align 8, !dbg !14053\l  %5 = load ptr, ptr %2, align 8, !dbg !14054\l  %6 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %3, ptr noundef\l... @.str.113, ptr noundef %4, ptr noundef %5) #12, !dbg !14055\l  call void @showFileNames(), !dbg !14056\l  call void @cleanUpAndFail(i32 noundef 3) #13, !dbg !14057\l  unreachable, !dbg !14057\l}"];
+}

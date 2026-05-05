@@ -1,0 +1,1 @@
+hello world this is a test file for bzip2 compression

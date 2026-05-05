@@ -1,0 +1,12 @@
+digraph "CFG for 'countHardLinks' function" {
+	label="CFG for 'countHardLinks' function";
+
+	Node0xbff46d220 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{1:\l|  %2 = alloca i32, align 4\l  %3 = alloca ptr, align 8\l  %4 = alloca i32, align 4\l  %5 = alloca %struct.stat, align 8\l  store ptr %0, ptr %3, align 8\l  %6 = load ptr, ptr %3, align 8, !dbg !14144\l  %7 = call i32 @\"\\01_lstat\"(ptr noundef %6, ptr noundef %5), !dbg !14145\l  store i32 %7, ptr %4, align 4, !dbg !14146\l  %8 = load i32, ptr %4, align 4, !dbg !14147\l  %9 = icmp ne i32 %8, 0, !dbg !14149\l  br i1 %9, label %10, label %11, !dbg !14149\l|{<s0>T|<s1>F}}"];
+	Node0xbff46d220:s0 -> Node0xbff46d270;
+	Node0xbff46d220:s1 -> Node0xbff46d2c0;
+	Node0xbff46d270 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70", fontname="Courier",label="{10:\l|  store i32 0, ptr %2, align 4, !dbg !14150\l  br label %16, !dbg !14150\l}"];
+	Node0xbff46d270 -> Node0xbff46d310;
+	Node0xbff46d2c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170", fontname="Courier",label="{11:\l|  %12 = getelementptr inbounds nuw %struct.stat, ptr %5, i32 0, i32 2, !dbg\l... !14151\l  %13 = load i16, ptr %12, align 2, !dbg !14151\l  %14 = zext i16 %13 to i32, !dbg !14152\l  %15 = sub nsw i32 %14, 1, !dbg !14153\l  store i32 %15, ptr %2, align 4, !dbg !14154\l  br label %16, !dbg !14154\l}"];
+	Node0xbff46d2c0 -> Node0xbff46d310;
+	Node0xbff46d310 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{16:\l|  %17 = load i32, ptr %2, align 4, !dbg !14155\l  ret i32 %17, !dbg !14155\l}"];
+}

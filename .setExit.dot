@@ -1,0 +1,10 @@
+digraph "CFG for 'setExit' function" {
+	label="CFG for 'setExit' function";
+
+	Node0xbff40d630 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{1:\l|  %2 = alloca i32, align 4\l  store i32 %0, ptr %2, align 4\l  %3 = load i32, ptr %2, align 4, !dbg !11790\l  %4 = load i32, ptr @exitValue, align 4, !dbg !11792\l  %5 = icmp sgt i32 %3, %4, !dbg !11793\l  br i1 %5, label %6, label %8, !dbg !11793\l|{<s0>T|<s1>F}}"];
+	Node0xbff40d630:s0 -> Node0xbff40d680;
+	Node0xbff40d630:s1 -> Node0xbff40d6d0;
+	Node0xbff40d680 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{6:\l|  %7 = load i32, ptr %2, align 4, !dbg !11794\l  store i32 %7, ptr @exitValue, align 4, !dbg !11795\l  br label %8, !dbg !11796\l}"];
+	Node0xbff40d680 -> Node0xbff40d6d0;
+	Node0xbff40d6d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{8:\l|  ret void, !dbg !11797\l}"];
+}

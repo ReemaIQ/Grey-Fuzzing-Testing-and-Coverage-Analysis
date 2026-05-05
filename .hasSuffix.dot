@@ -1,0 +1,17 @@
+digraph "CFG for 'hasSuffix' function" {
+	label="CFG for 'hasSuffix' function";
+
+	Node0xbff46ce60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{2:\l|  %3 = alloca i8, align 1\l  %4 = alloca ptr, align 8\l  %5 = alloca ptr, align 8\l  %6 = alloca i32, align 4\l  %7 = alloca i32, align 4\l  store ptr %0, ptr %4, align 8\l  store ptr %1, ptr %5, align 8\l  %8 = load ptr, ptr %4, align 8, !dbg !14092\l  %9 = call i64 @strlen(ptr noundef %8) #12, !dbg !14093\l  %10 = trunc i64 %9 to i32, !dbg !14093\l  store i32 %10, ptr %6, align 4, !dbg !14091\l  %11 = load ptr, ptr %5, align 8, !dbg !14096\l  %12 = call i64 @strlen(ptr noundef %11) #12, !dbg !14097\l  %13 = trunc i64 %12 to i32, !dbg !14097\l  store i32 %13, ptr %7, align 4, !dbg !14095\l  %14 = load i32, ptr %6, align 4, !dbg !14098\l  %15 = load i32, ptr %7, align 4, !dbg !14100\l  %16 = icmp slt i32 %14, %15, !dbg !14101\l  br i1 %16, label %17, label %18, !dbg !14101\l|{<s0>T|<s1>F}}"];
+	Node0xbff46ce60:s0 -> Node0xbff46ceb0;
+	Node0xbff46ce60:s1 -> Node0xbff46cf00;
+	Node0xbff46ceb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{17:\l|  store i8 0, ptr %3, align 1, !dbg !14102\l  br label %32, !dbg !14102\l}"];
+	Node0xbff46ceb0 -> Node0xbff46cf50;
+	Node0xbff46cf00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{18:\l|  %19 = load ptr, ptr %4, align 8, !dbg !14103\l  %20 = load i32, ptr %6, align 4, !dbg !14105\l  %21 = sext i32 %20 to i64, !dbg !14106\l  %22 = getelementptr inbounds i8, ptr %19, i64 %21, !dbg !14106\l  %23 = load i32, ptr %7, align 4, !dbg !14107\l  %24 = sext i32 %23 to i64, !dbg !14108\l  %25 = sub i64 0, %24, !dbg !14108\l  %26 = getelementptr inbounds i8, ptr %22, i64 %25, !dbg !14108\l  %27 = load ptr, ptr %5, align 8, !dbg !14109\l  %28 = call i32 @strcmp(ptr noundef %26, ptr noundef %27) #12, !dbg !14110\l  %29 = icmp eq i32 %28, 0, !dbg !14111\l  br i1 %29, label %30, label %31, !dbg !14111\l|{<s0>T|<s1>F}}"];
+	Node0xbff46cf00:s0 -> Node0xbff46cfa0;
+	Node0xbff46cf00:s1 -> Node0xbff46cff0;
+	Node0xbff46cfa0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470", fontname="Courier",label="{30:\l|  store i8 1, ptr %3, align 1, !dbg !14112\l  br label %32, !dbg !14112\l}"];
+	Node0xbff46cfa0 -> Node0xbff46cf50;
+	Node0xbff46cff0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170", fontname="Courier",label="{31:\l|  store i8 0, ptr %3, align 1, !dbg !14113\l  br label %32, !dbg !14113\l}"];
+	Node0xbff46cff0 -> Node0xbff46cf50;
+	Node0xbff46cf50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{32:\l|  %33 = load i8, ptr %3, align 1, !dbg !14114\l  ret i8 %33, !dbg !14114\l}"];
+}

@@ -1,0 +1,16 @@
+digraph "CFG for 'mySIGSEGVorSIGBUScatcher' function" {
+	label="CFG for 'mySIGSEGVorSIGBUScatcher' function";
+
+	Node0xbff3ed040 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{1:\l|  %2 = alloca i32, align 4\l  store i32 %0, ptr %2, align 4\l  %3 = load i32, ptr @opMode, align 4, !dbg !10935\l  %4 = icmp eq i32 %3, 1, !dbg !10937\l  br i1 %4, label %5, label %9, !dbg !10937\l|{<s0>T|<s1>F}}"];
+	Node0xbff3ed040:s0 -> Node0xbff3ed090;
+	Node0xbff3ed040:s1 -> Node0xbff3ed0e0;
+	Node0xbff3ed090 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{5:\l|  %6 = load ptr, ptr @__stderrp, align 8, !dbg !10938\l  %7 = load ptr, ptr @progName, align 8, !dbg !10939\l  %8 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %6, ptr noundef @.str.78,\l... ptr noundef %7) #12, !dbg !10940\l  br label %13, !dbg !10940\l}"];
+	Node0xbff3ed090 -> Node0xbff3ed130;
+	Node0xbff3ed0e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{9:\l|  %10 = load ptr, ptr @__stderrp, align 8, !dbg !10941\l  %11 = load ptr, ptr @progName, align 8, !dbg !10942\l  %12 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %10, ptr noundef\l... @.str.79, ptr noundef %11) #12, !dbg !10943\l  br label %13\l}"];
+	Node0xbff3ed0e0 -> Node0xbff3ed130;
+	Node0xbff3ed130 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{13:\l|  call void @showFileNames(), !dbg !10944\l  %14 = load i32, ptr @opMode, align 4, !dbg !10945\l  %15 = icmp eq i32 %14, 1, !dbg !10947\l  br i1 %15, label %16, label %17, !dbg !10947\l|{<s0>T|<s1>F}}"];
+	Node0xbff3ed130:s0 -> Node0xbff3ed180;
+	Node0xbff3ed130:s1 -> Node0xbff3ed1d0;
+	Node0xbff3ed180 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{16:\l|  call void @cleanUpAndFail(i32 noundef 3) #13, !dbg !10948\l  unreachable, !dbg !10948\l}"];
+	Node0xbff3ed1d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{17:\l|  call void @cadvise(), !dbg !10949\l  call void @cleanUpAndFail(i32 noundef 2) #13, !dbg !10951\l  unreachable, !dbg !10951\l}"];
+}

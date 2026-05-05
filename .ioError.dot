@@ -1,0 +1,5 @@
+digraph "CFG for 'ioError' function" {
+	label="CFG for 'ioError' function";
+
+	Node0xbff46e850 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{0:\l|  %1 = load ptr, ptr @__stderrp, align 8, !dbg !14441\l  %2 = load ptr, ptr @progName, align 8, !dbg !14442\l  %3 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %1, ptr noundef\l... @.str.119, ptr noundef %2) #12, !dbg !14443\l  %4 = load ptr, ptr @progName, align 8, !dbg !14444\l  call void @perror(ptr noundef %4) #13, !dbg !14445\l  call void @showFileNames(), !dbg !14446\l  call void @cleanUpAndFail(i32 noundef 1) #14, !dbg !14447\l  unreachable, !dbg !14447\l}"];
+}

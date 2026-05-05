@@ -1,0 +1,14 @@
+digraph "CFG for 'uInt64_qrm10' function" {
+	label="CFG for 'uInt64_qrm10' function";
+
+	Node0xbff46edf0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{1:\l|  %2 = alloca ptr, align 8\l  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  store ptr %0, ptr %2, align 8\l  store i32 0, ptr %3, align 4, !dbg !14622\l  store i32 7, ptr %5, align 4, !dbg !14623\l  br label %6, !dbg !14625\l}"];
+	Node0xbff46edf0 -> Node0xbff46ee40;
+	Node0xbff46ee40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{6:\l|  %7 = load i32, ptr %5, align 4, !dbg !14626\l  %8 = icmp sge i32 %7, 0, !dbg !14628\l  br i1 %8, label %9, label %33, !dbg !14629\l|{<s0>T|<s1>F}}"];
+	Node0xbff46ee40:s0 -> Node0xbff46ee90;
+	Node0xbff46ee40:s1 -> Node0xbff46eee0;
+	Node0xbff46ee90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{9:\l|  %10 = load i32, ptr %3, align 4, !dbg !14630\l  %11 = mul i32 %10, 256, !dbg !14632\l  %12 = load ptr, ptr %2, align 8, !dbg !14633\l  %13 = getelementptr inbounds nuw %struct.UInt64, ptr %12, i32 0, i32 0, !dbg\l... !14634\l  %14 = load i32, ptr %5, align 4, !dbg !14635\l  %15 = sext i32 %14 to i64, !dbg !14633\l  %16 = getelementptr inbounds [8 x i8], ptr %13, i64 0, i64 %15, !dbg !14633\l  %17 = load i8, ptr %16, align 1, !dbg !14633\l  %18 = zext i8 %17 to i32, !dbg !14633\l  %19 = add i32 %11, %18, !dbg !14636\l  store i32 %19, ptr %4, align 4, !dbg !14637\l  %20 = load i32, ptr %4, align 4, !dbg !14638\l  %21 = udiv i32 %20, 10, !dbg !14639\l  %22 = trunc i32 %21 to i8, !dbg !14638\l  %23 = load ptr, ptr %2, align 8, !dbg !14640\l  %24 = getelementptr inbounds nuw %struct.UInt64, ptr %23, i32 0, i32 0, !dbg\l... !14641\l  %25 = load i32, ptr %5, align 4, !dbg !14642\l  %26 = sext i32 %25 to i64, !dbg !14640\l  %27 = getelementptr inbounds [8 x i8], ptr %24, i64 0, i64 %26, !dbg !14640\l  store i8 %22, ptr %27, align 1, !dbg !14643\l  %28 = load i32, ptr %4, align 4, !dbg !14644\l  %29 = urem i32 %28, 10, !dbg !14645\l  store i32 %29, ptr %3, align 4, !dbg !14646\l  br label %30, !dbg !14647\l}"];
+	Node0xbff46ee90 -> Node0xbff46ef30;
+	Node0xbff46ef30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{30:\l|  %31 = load i32, ptr %5, align 4, !dbg !14648\l  %32 = add nsw i32 %31, -1, !dbg !14648\l  store i32 %32, ptr %5, align 4, !dbg !14648\l  br label %6, !dbg !14649, !llvm.loop !14650\l}"];
+	Node0xbff46ef30 -> Node0xbff46ee40;
+	Node0xbff46eee0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{33:\l|  %34 = load i32, ptr %3, align 4, !dbg !14652\l  ret i32 %34, !dbg !14653\l}"];
+}

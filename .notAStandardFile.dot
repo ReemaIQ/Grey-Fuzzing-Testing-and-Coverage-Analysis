@@ -1,0 +1,17 @@
+digraph "CFG for 'notAStandardFile' function" {
+	label="CFG for 'notAStandardFile' function";
+
+	Node0xbff46d040 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{1:\l|  %2 = alloca i8, align 1\l  %3 = alloca ptr, align 8\l  %4 = alloca i32, align 4\l  %5 = alloca %struct.stat, align 8\l  store ptr %0, ptr %3, align 8\l  %6 = load ptr, ptr %3, align 8, !dbg !14122\l  %7 = call i32 @\"\\01_lstat\"(ptr noundef %6, ptr noundef %5), !dbg !14123\l  store i32 %7, ptr %4, align 4, !dbg !14124\l  %8 = load i32, ptr %4, align 4, !dbg !14125\l  %9 = icmp ne i32 %8, 0, !dbg !14127\l  br i1 %9, label %10, label %11, !dbg !14127\l|{<s0>T|<s1>F}}"];
+	Node0xbff46d040:s0 -> Node0xbff46d090;
+	Node0xbff46d040:s1 -> Node0xbff46d0e0;
+	Node0xbff46d090 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70", fontname="Courier",label="{10:\l|  store i8 1, ptr %2, align 1, !dbg !14128\l  br label %19, !dbg !14128\l}"];
+	Node0xbff46d090 -> Node0xbff46d130;
+	Node0xbff46d0e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170", fontname="Courier",label="{11:\l|  %12 = getelementptr inbounds nuw %struct.stat, ptr %5, i32 0, i32 1, !dbg\l... !14129\l  %13 = load i16, ptr %12, align 4, !dbg !14129\l  %14 = zext i16 %13 to i32, !dbg !14131\l  %15 = and i32 %14, 61440, !dbg !14131\l  %16 = icmp eq i32 %15, 32768, !dbg !14131\l  br i1 %16, label %17, label %18, !dbg !14131\l|{<s0>T|<s1>F}}"];
+	Node0xbff46d0e0:s0 -> Node0xbff46d180;
+	Node0xbff46d0e0:s1 -> Node0xbff46d1d0;
+	Node0xbff46d180 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470", fontname="Courier",label="{17:\l|  store i8 0, ptr %2, align 1, !dbg !14132\l  br label %19, !dbg !14132\l}"];
+	Node0xbff46d180 -> Node0xbff46d130;
+	Node0xbff46d1d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470", fontname="Courier",label="{18:\l|  store i8 1, ptr %2, align 1, !dbg !14133\l  br label %19, !dbg !14133\l}"];
+	Node0xbff46d1d0 -> Node0xbff46d130;
+	Node0xbff46d130 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{19:\l|  %20 = load i8, ptr %2, align 1, !dbg !14134\l  ret i8 %20, !dbg !14134\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for 'mkCell' function" {
+	label="CFG for 'mkCell' function";
+
+	Node0xbff46ca50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{0:\l|  %1 = alloca ptr, align 8\l  %2 = call ptr @myMalloc(i32 noundef 16), !dbg !14016\l  store ptr %2, ptr %1, align 8, !dbg !14017\l  %3 = load ptr, ptr %1, align 8, !dbg !14018\l  %4 = getelementptr inbounds nuw %struct.zzzz, ptr %3, i32 0, i32 0, !dbg\l... !14019\l  store ptr null, ptr %4, align 8, !dbg !14020\l  %5 = load ptr, ptr %1, align 8, !dbg !14021\l  %6 = getelementptr inbounds nuw %struct.zzzz, ptr %5, i32 0, i32 1, !dbg\l... !14022\l  store ptr null, ptr %6, align 8, !dbg !14023\l  %7 = load ptr, ptr %1, align 8, !dbg !14024\l  ret ptr %7, !dbg !14025\l}"];
+}

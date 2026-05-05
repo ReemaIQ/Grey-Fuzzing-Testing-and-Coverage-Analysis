@@ -1,0 +1,10 @@
+digraph "CFG for 'compressedStreamEOF' function" {
+	label="CFG for 'compressedStreamEOF' function";
+
+	Node0xbff490fa0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{0:\l|  %1 = load i8, ptr @noisy, align 1, !dbg !14966\l  %2 = icmp ne i8 %1, 0, !dbg !14966\l  br i1 %2, label %3, label %8, !dbg !14966\l|{<s0>T|<s1>F}}"];
+	Node0xbff490fa0:s0 -> Node0xbff490ff0;
+	Node0xbff490fa0:s1 -> Node0xbff491040;
+	Node0xbff490ff0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{3:\l|  %4 = load ptr, ptr @__stderrp, align 8, !dbg !14968\l  %5 = load ptr, ptr @progName, align 8, !dbg !14970\l  %6 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %4, ptr noundef\l... @.str.134, ptr noundef %5) #12, !dbg !14971\l  %7 = load ptr, ptr @progName, align 8, !dbg !14972\l  call void @perror(ptr noundef %7) #13, !dbg !14973\l  call void @showFileNames(), !dbg !14974\l  call void @cadvise(), !dbg !14975\l  br label %8, !dbg !14976\l}"];
+	Node0xbff490ff0 -> Node0xbff491040;
+	Node0xbff491040 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{8:\l|  call void @cleanUpAndFail(i32 noundef 2) #14, !dbg !14977\l  unreachable, !dbg !14977\l}"];
+}

@@ -1,0 +1,10 @@
+digraph "CFG for 'cadvise' function" {
+	label="CFG for 'cadvise' function";
+
+	Node0xbff46c960 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{0:\l|  %1 = load i8, ptr @noisy, align 1, !dbg !14006\l  %2 = icmp ne i8 %1, 0, !dbg !14006\l  br i1 %2, label %3, label %6, !dbg !14006\l|{<s0>T|<s1>F}}"];
+	Node0xbff46c960:s0 -> Node0xbff46c9b0;
+	Node0xbff46c960:s1 -> Node0xbff46ca00;
+	Node0xbff46c9b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70", fontname="Courier",label="{3:\l|  %4 = load ptr, ptr @__stderrp, align 8, !dbg !14008\l  %5 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %4, ptr noundef @.str.88)\l... #12, !dbg !14009\l  br label %6, !dbg !14009\l}"];
+	Node0xbff46c9b0 -> Node0xbff46ca00;
+	Node0xbff46ca00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{6:\l|  ret void, !dbg !14010\l}"];
+}

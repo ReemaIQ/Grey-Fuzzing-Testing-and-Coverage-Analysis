@@ -1,0 +1,21 @@
+digraph "CFG for 'uInt64_isZero' function" {
+	label="CFG for 'uInt64_isZero' function";
+
+	Node0xbff46ef80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70", fontname="Courier",label="{1:\l|  %2 = alloca i8, align 1\l  %3 = alloca ptr, align 8\l  %4 = alloca i32, align 4\l  store ptr %0, ptr %3, align 8\l  store i32 0, ptr %4, align 4, !dbg !14661\l  br label %5, !dbg !14663\l}"];
+	Node0xbff46ef80 -> Node0xbff46efd0;
+	Node0xbff46efd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{5:\l|  %6 = load i32, ptr %4, align 4, !dbg !14664\l  %7 = icmp slt i32 %6, 8, !dbg !14666\l  br i1 %7, label %8, label %22, !dbg !14667\l|{<s0>T|<s1>F}}"];
+	Node0xbff46efd0:s0 -> Node0xbff46f020;
+	Node0xbff46efd0:s1 -> Node0xbff46f070;
+	Node0xbff46f020 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{8:\l|  %9 = load ptr, ptr %3, align 8, !dbg !14668\l  %10 = getelementptr inbounds nuw %struct.UInt64, ptr %9, i32 0, i32 0, !dbg\l... !14670\l  %11 = load i32, ptr %4, align 4, !dbg !14671\l  %12 = sext i32 %11 to i64, !dbg !14668\l  %13 = getelementptr inbounds [8 x i8], ptr %10, i64 0, i64 %12, !dbg !14668\l  %14 = load i8, ptr %13, align 1, !dbg !14668\l  %15 = zext i8 %14 to i32, !dbg !14668\l  %16 = icmp ne i32 %15, 0, !dbg !14672\l  br i1 %16, label %17, label %18, !dbg !14672\l|{<s0>T|<s1>F}}"];
+	Node0xbff46f020:s0 -> Node0xbff46f0c0;
+	Node0xbff46f020:s1 -> Node0xbff46f110;
+	Node0xbff46f0c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{17:\l|  store i8 0, ptr %2, align 1, !dbg !14673\l  br label %23, !dbg !14673\l}"];
+	Node0xbff46f0c0 -> Node0xbff46f160;
+	Node0xbff46f110 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{18:\l|  br label %19, !dbg !14674\l}"];
+	Node0xbff46f110 -> Node0xbff46f1b0;
+	Node0xbff46f1b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{19:\l|  %20 = load i32, ptr %4, align 4, !dbg !14675\l  %21 = add nsw i32 %20, 1, !dbg !14675\l  store i32 %21, ptr %4, align 4, !dbg !14675\l  br label %5, !dbg !14676, !llvm.loop !14677\l}"];
+	Node0xbff46f1b0 -> Node0xbff46efd0;
+	Node0xbff46f070 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{22:\l|  store i8 1, ptr %2, align 1, !dbg !14679\l  br label %23, !dbg !14679\l}"];
+	Node0xbff46f070 -> Node0xbff46f160;
+	Node0xbff46f160 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70", fontname="Courier",label="{23:\l|  %24 = load i8, ptr %2, align 1, !dbg !14680\l  ret i8 %24, !dbg !14680\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for 'outOfMemory' function" {
+	label="CFG for 'outOfMemory' function";
+
+	Node0xbff46cbe0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{0:\l|  %1 = load ptr, ptr @__stderrp, align 8, !dbg !14044\l  %2 = load ptr, ptr @progName, align 8, !dbg !14045\l  %3 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %1, ptr noundef @.str.90,\l... ptr noundef %2) #12, !dbg !14046\l  call void @showFileNames(), !dbg !14047\l  call void @cleanUpAndFail(i32 noundef 1) #13, !dbg !14048\l  unreachable, !dbg !14048\l}"];
+}

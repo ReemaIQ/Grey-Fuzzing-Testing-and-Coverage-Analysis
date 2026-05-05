@@ -1,0 +1,14 @@
+digraph "CFG for 'uInt64_to_double' function" {
+	label="CFG for 'uInt64_to_double' function";
+
+	Node0xbff46e940 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{1:\l|  %2 = alloca ptr, align 8\l  %3 = alloca i32, align 4\l  %4 = alloca double, align 8\l  %5 = alloca double, align 8\l  store ptr %0, ptr %2, align 8\l  store double 1.000000e+00, ptr %4, align 8, !dbg !14521\l  store double 0.000000e+00, ptr %5, align 8, !dbg !14523\l  store i32 0, ptr %3, align 4, !dbg !14524\l  br label %6, !dbg !14526\l}"];
+	Node0xbff46e940 -> Node0xbff46e990;
+	Node0xbff46e990 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{6:\l|  %7 = load i32, ptr %3, align 4, !dbg !14527\l  %8 = icmp slt i32 %7, 8, !dbg !14529\l  br i1 %8, label %9, label %25, !dbg !14530\l|{<s0>T|<s1>F}}"];
+	Node0xbff46e990:s0 -> Node0xbff46e9e0;
+	Node0xbff46e990:s1 -> Node0xbff46ea30;
+	Node0xbff46e9e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{9:\l|  %10 = load double, ptr %4, align 8, !dbg !14531\l  %11 = load ptr, ptr %2, align 8, !dbg !14533\l  %12 = getelementptr inbounds nuw %struct.UInt64, ptr %11, i32 0, i32 0, !dbg\l... !14534\l  %13 = load i32, ptr %3, align 4, !dbg !14535\l  %14 = sext i32 %13 to i64, !dbg !14533\l  %15 = getelementptr inbounds [8 x i8], ptr %12, i64 0, i64 %14, !dbg !14533\l  %16 = load i8, ptr %15, align 1, !dbg !14533\l  %17 = uitofp i8 %16 to double, !dbg !14536\l  %18 = load double, ptr %5, align 8, !dbg !14537\l  %19 = call double @llvm.fmuladd.f64(double %10, double %17, double %18),\l... !dbg !14537\l  store double %19, ptr %5, align 8, !dbg !14537\l  %20 = load double, ptr %4, align 8, !dbg !14538\l  %21 = fmul double %20, 2.560000e+02, !dbg !14538\l  store double %21, ptr %4, align 8, !dbg !14538\l  br label %22, !dbg !14539\l}"];
+	Node0xbff46e9e0 -> Node0xbff46ea80;
+	Node0xbff46ea80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{22:\l|  %23 = load i32, ptr %3, align 4, !dbg !14540\l  %24 = add nsw i32 %23, 1, !dbg !14540\l  store i32 %24, ptr %3, align 4, !dbg !14540\l  br label %6, !dbg !14541, !llvm.loop !14542\l}"];
+	Node0xbff46ea80 -> Node0xbff46e990;
+	Node0xbff46ea30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{25:\l|  %26 = load double, ptr %5, align 8, !dbg !14544\l  ret double %26, !dbg !14545\l}"];
+}

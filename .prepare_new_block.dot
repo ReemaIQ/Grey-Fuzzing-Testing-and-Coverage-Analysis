@@ -1,0 +1,14 @@
+digraph "CFG for 'prepare_new_block' function" {
+	label="CFG for 'prepare_new_block' function";
+
+	Node0xbff32e4e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{1:\l|  %2 = alloca ptr, align 8\l  %3 = alloca i32, align 4\l  store ptr %0, ptr %2, align 8\l  %4 = load ptr, ptr %2, align 8, !dbg !7256\l  %5 = getelementptr inbounds nuw %struct.EState, ptr %4, i32 0, i32 17, !dbg\l... !7257\l  store i32 0, ptr %5, align 4, !dbg !7258\l  %6 = load ptr, ptr %2, align 8, !dbg !7259\l  %7 = getelementptr inbounds nuw %struct.EState, ptr %6, i32 0, i32 19, !dbg\l... !7260\l  store i32 0, ptr %7, align 4, !dbg !7261\l  %8 = load ptr, ptr %2, align 8, !dbg !7262\l  %9 = getelementptr inbounds nuw %struct.EState, ptr %8, i32 0, i32 20, !dbg\l... !7263\l  store i32 0, ptr %9, align 8, !dbg !7264\l  %10 = load ptr, ptr %2, align 8, !dbg !7265\l  %11 = getelementptr inbounds nuw %struct.EState, ptr %10, i32 0, i32 26,\l... !dbg !7267\l  store i32 -1, ptr %11, align 8, !dbg !7268\l  store i32 0, ptr %3, align 4, !dbg !7269\l  br label %12, !dbg !7271\l}"];
+	Node0xbff32e4e0 -> Node0xbff32e530;
+	Node0xbff32e530 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{12:\l|  %13 = load i32, ptr %3, align 4, !dbg !7272\l  %14 = icmp slt i32 %13, 256, !dbg !7274\l  br i1 %14, label %15, label %24, !dbg !7275\l|{<s0>T|<s1>F}}"];
+	Node0xbff32e530:s0 -> Node0xbff32e580;
+	Node0xbff32e530:s1 -> Node0xbff32e5d0;
+	Node0xbff32e580 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{15:\l|  %16 = load ptr, ptr %2, align 8, !dbg !7276\l  %17 = getelementptr inbounds nuw %struct.EState, ptr %16, i32 0, i32 22,\l... !dbg !7277\l  %18 = load i32, ptr %3, align 4, !dbg !7278\l  %19 = sext i32 %18 to i64, !dbg !7276\l  %20 = getelementptr inbounds [256 x i8], ptr %17, i64 0, i64 %19, !dbg !7276\l  store i8 0, ptr %20, align 1, !dbg !7279\l  br label %21, !dbg !7276\l}"];
+	Node0xbff32e580 -> Node0xbff32e620;
+	Node0xbff32e620 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{21:\l|  %22 = load i32, ptr %3, align 4, !dbg !7280\l  %23 = add nsw i32 %22, 1, !dbg !7280\l  store i32 %23, ptr %3, align 4, !dbg !7280\l  br label %12, !dbg !7281, !llvm.loop !7282\l}"];
+	Node0xbff32e620 -> Node0xbff32e530;
+	Node0xbff32e5d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{24:\l|  %25 = load ptr, ptr %2, align 8, !dbg !7284\l  %26 = getelementptr inbounds nuw %struct.EState, ptr %25, i32 0, i32 29,\l... !dbg !7285\l  %27 = load i32, ptr %26, align 4, !dbg !7286\l  %28 = add nsw i32 %27, 1, !dbg !7286\l  store i32 %28, ptr %26, align 4, !dbg !7286\l  ret void, !dbg !7287\l}"];
+}

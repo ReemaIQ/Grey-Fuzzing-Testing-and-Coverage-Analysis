@@ -1,0 +1,17 @@
+digraph "CFG for 'fopen_output_safely' function" {
+	label="CFG for 'fopen_output_safely' function";
+
+	Node0xbff3d4f00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{2:\l|  %3 = alloca ptr, align 8\l  %4 = alloca ptr, align 8\l  %5 = alloca ptr, align 8\l  %6 = alloca ptr, align 8\l  %7 = alloca i32, align 4\l  store ptr %0, ptr %4, align 8\l  store ptr %1, ptr %5, align 8\l  %8 = load ptr, ptr %4, align 8, !dbg !10320\l  %9 = call i32 (ptr, i32, ...) @\"\\01_open\"(ptr noundef %8, i32 noundef 2561,\l... i32 noundef 384), !dbg !10321\l  store i32 %9, ptr %7, align 4, !dbg !10322\l  %10 = load i32, ptr %7, align 4, !dbg !10323\l  %11 = icmp eq i32 %10, -1, !dbg !10325\l  br i1 %11, label %12, label %13, !dbg !10325\l|{<s0>T|<s1>F}}"];
+	Node0xbff3d4f00:s0 -> Node0xbff3d4f50;
+	Node0xbff3d4f00:s1 -> Node0xbff3d4fa0;
+	Node0xbff3d4f50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170", fontname="Courier",label="{12:\l|  store ptr null, ptr %3, align 8, !dbg !10326\l  br label %24, !dbg !10326\l}"];
+	Node0xbff3d4f50 -> Node0xbff3d4ff0;
+	Node0xbff3d4fa0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70", fontname="Courier",label="{13:\l|  %14 = load i32, ptr %7, align 4, !dbg !10327\l  %15 = load ptr, ptr %5, align 8, !dbg !10328\l  %16 = call ptr @\"\\01_fdopen\"(i32 noundef %14, ptr noundef %15), !dbg !10329\l  store ptr %16, ptr %6, align 8, !dbg !10330\l  %17 = load ptr, ptr %6, align 8, !dbg !10331\l  %18 = icmp eq ptr %17, null, !dbg !10333\l  br i1 %18, label %19, label %22, !dbg !10333\l|{<s0>T|<s1>F}}"];
+	Node0xbff3d4fa0:s0 -> Node0xbff3d5040;
+	Node0xbff3d4fa0:s1 -> Node0xbff3d5090;
+	Node0xbff3d5040 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470", fontname="Courier",label="{19:\l|  %20 = load i32, ptr %7, align 4, !dbg !10334\l  %21 = call i32 @\"\\01_close\"(i32 noundef %20), !dbg !10335\l  br label %22, !dbg !10335\l}"];
+	Node0xbff3d5040 -> Node0xbff3d5090;
+	Node0xbff3d5090 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70", fontname="Courier",label="{22:\l|  %23 = load ptr, ptr %6, align 8, !dbg !10336\l  store ptr %23, ptr %3, align 8, !dbg !10337\l  br label %24, !dbg !10337\l}"];
+	Node0xbff3d5090 -> Node0xbff3d4ff0;
+	Node0xbff3d4ff0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{24:\l|  %25 = load ptr, ptr %3, align 8, !dbg !10338\l  ret ptr %25, !dbg !10338\l}"];
+}

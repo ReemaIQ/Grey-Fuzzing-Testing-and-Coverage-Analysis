@@ -1,0 +1,9 @@
+digraph "CFG for 'myMalloc' function" {
+	label="CFG for 'myMalloc' function";
+
+	Node0xbff46caa0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{1:\l|  %2 = alloca i32, align 4\l  %3 = alloca ptr, align 8\l  store i32 %0, ptr %2, align 4\l  %4 = load i32, ptr %2, align 4, !dbg !14033\l  %5 = sext i32 %4 to i64, !dbg !14034\l  %6 = call ptr @malloc(i64 noundef %5) #12, !dbg !14035\l  store ptr %6, ptr %3, align 8, !dbg !14036\l  %7 = load ptr, ptr %3, align 8, !dbg !14037\l  %8 = icmp eq ptr %7, null, !dbg !14039\l  br i1 %8, label %9, label %10, !dbg !14039\l|{<s0>T|<s1>F}}"];
+	Node0xbff46caa0:s0 -> Node0xbff46caf0;
+	Node0xbff46caa0:s1 -> Node0xbff46cb40;
+	Node0xbff46caf0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70", fontname="Courier",label="{9:\l|  call void @outOfMemory() #13, !dbg !14040\l  unreachable, !dbg !14040\l}"];
+	Node0xbff46cb40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{10:\l|  %11 = load ptr, ptr %3, align 8, !dbg !14041\l  ret ptr %11, !dbg !14042\l}"];
+}

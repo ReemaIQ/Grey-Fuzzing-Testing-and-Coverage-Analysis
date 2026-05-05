@@ -1,0 +1,9 @@
+# Ignore large fuzzing queue files
+out_compress/default/queue/
+out_decompress/default/queue/
+out_decompress2/default/queue/
+*.gcda
+*.gcno
+bzip2_fuzz
+bzip2_cov
+*.ll

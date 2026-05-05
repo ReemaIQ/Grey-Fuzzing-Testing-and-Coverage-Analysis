@@ -1,0 +1,12 @@
+digraph "CFG for 'myfeof' function" {
+	label="CFG for 'myfeof' function";
+
+	Node0xbff3ae3f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{1:\l|  %2 = alloca i8, align 1\l  %3 = alloca ptr, align 8\l  %4 = alloca i32, align 4\l  store ptr %0, ptr %3, align 8\l  %5 = load ptr, ptr %3, align 8, !dbg !9719\l  %6 = call i32 @fgetc(ptr noundef %5), !dbg !9720\l  store i32 %6, ptr %4, align 4, !dbg !9718\l  %7 = load i32, ptr %4, align 4, !dbg !9721\l  %8 = icmp eq i32 %7, -1, !dbg !9723\l  br i1 %8, label %9, label %10, !dbg !9723\l|{<s0>T|<s1>F}}"];
+	Node0xbff3ae3f0:s0 -> Node0xbff3ae440;
+	Node0xbff3ae3f0:s1 -> Node0xbff3ae490;
+	Node0xbff3ae440 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170", fontname="Courier",label="{9:\l|  store i8 1, ptr %2, align 1, !dbg !9724\l  br label %14, !dbg !9724\l}"];
+	Node0xbff3ae440 -> Node0xbff3ae4e0;
+	Node0xbff3ae490 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70", fontname="Courier",label="{10:\l|  %11 = load i32, ptr %4, align 4, !dbg !9725\l  %12 = load ptr, ptr %3, align 8, !dbg !9726\l  %13 = call i32 @ungetc(i32 noundef %11, ptr noundef %12), !dbg !9727\l  store i8 0, ptr %2, align 1, !dbg !9728\l  br label %14, !dbg !9728\l}"];
+	Node0xbff3ae490 -> Node0xbff3ae4e0;
+	Node0xbff3ae4e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{14:\l|  %15 = load i8, ptr %2, align 1, !dbg !9729\l  ret i8 %15, !dbg !9729\l}"];
+}

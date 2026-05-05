@@ -1,0 +1,9 @@
+digraph "CFG for 'copyFileName' function" {
+	label="CFG for 'copyFileName' function";
+
+	Node0xbff3ed2c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{2:\l|  %3 = alloca ptr, align 8\l  %4 = alloca ptr, align 8\l  store ptr %0, ptr %3, align 8\l  store ptr %1, ptr %4, align 8\l  %5 = load ptr, ptr %4, align 8, !dbg !10959\l  %6 = call i64 @strlen(ptr noundef %5) #12, !dbg !10961\l  %7 = icmp ugt i64 %6, 1024, !dbg !10962\l  br i1 %7, label %8, label %13, !dbg !10962\l|{<s0>T|<s1>F}}"];
+	Node0xbff3ed2c0:s0 -> Node0xbff3ed310;
+	Node0xbff3ed2c0:s1 -> Node0xbff3ed360;
+	Node0xbff3ed310 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70", fontname="Courier",label="{8:\l|  %9 = load ptr, ptr @__stderrp, align 8, !dbg !10963\l  %10 = load ptr, ptr %4, align 8, !dbg !10965\l  %11 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %9, ptr noundef\l... @.str.89, ptr noundef %10, i32 noundef 1024) #12, !dbg !10966\l  call void @setExit(i32 noundef 1), !dbg !10967\l  %12 = load i32, ptr @exitValue, align 4, !dbg !10968\l  call void @exit(i32 noundef %12) #13, !dbg !10969\l  unreachable, !dbg !10969\l}"];
+	Node0xbff3ed360 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{13:\l|  %14 = load ptr, ptr %3, align 8, !dbg !10970\l  %15 = load ptr, ptr %4, align 8, !dbg !10971\l  %16 = load ptr, ptr %3, align 8, !dbg !10970\l  %17 = call i64 @llvm.objectsize.i64.p0(ptr %16, i1 false, i1 true, i1\l... false), !dbg !10972\l  %18 = call ptr @__strncpy_chk(ptr noundef %14, ptr noundef %15, i64 noundef\l... 1024, i64 noundef %17) #12, !dbg !10972\l  %19 = load ptr, ptr %3, align 8, !dbg !10973\l  %20 = getelementptr inbounds i8, ptr %19, i64 1024, !dbg !10973\l  store i8 0, ptr %20, align 1, !dbg !10974\l  ret void, !dbg !10975\l}"];
+}

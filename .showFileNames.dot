@@ -1,0 +1,10 @@
+digraph "CFG for 'showFileNames' function" {
+	label="CFG for 'showFileNames' function";
+
+	Node0xbff46c280 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{0:\l|  %1 = load i8, ptr @noisy, align 1, !dbg !13922\l  %2 = icmp ne i8 %1, 0, !dbg !13922\l  br i1 %2, label %3, label %6, !dbg !13922\l|{<s0>T|<s1>F}}"];
+	Node0xbff46c280:s0 -> Node0xbff46c2d0;
+	Node0xbff46c280:s1 -> Node0xbff46c320;
+	Node0xbff46c2d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70", fontname="Courier",label="{3:\l|  %4 = load ptr, ptr @__stderrp, align 8, !dbg !13924\l  %5 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %4, ptr noundef @.str.80,\l... ptr noundef @inName, ptr noundef @outName) #12, !dbg !13925\l  br label %6, !dbg !13925\l}"];
+	Node0xbff46c2d0 -> Node0xbff46c320;
+	Node0xbff46c320 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{6:\l|  ret void, !dbg !13926\l}"];
+}

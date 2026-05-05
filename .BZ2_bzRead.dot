@@ -1,0 +1,20 @@
+digraph "CFG for 'BZ2_bzread' function" {
+	label="CFG for 'BZ2_bzread' function";
+
+	Node0xbff3d46e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{3:\l|  %4 = alloca i32, align 4\l  %5 = alloca ptr, align 8\l  %6 = alloca ptr, align 8\l  %7 = alloca i32, align 4\l  %8 = alloca i32, align 4\l  %9 = alloca i32, align 4\l  store ptr %0, ptr %5, align 8\l  store ptr %1, ptr %6, align 8\l  store i32 %2, ptr %7, align 4\l  %10 = load ptr, ptr %5, align 8, !dbg !10188\l  %11 = getelementptr inbounds nuw %struct.bzFile, ptr %10, i32 0, i32 5, !dbg\l... !10190\l  %12 = load i32, ptr %11, align 8, !dbg !10190\l  %13 = icmp eq i32 %12, 4, !dbg !10191\l  br i1 %13, label %14, label %15, !dbg !10191\l|{<s0>T|<s1>F}}"];
+	Node0xbff3d46e0:s0 -> Node0xbff3d4730;
+	Node0xbff3d46e0:s1 -> Node0xbff3d4780;
+	Node0xbff3d4730 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{14:\l|  store i32 0, ptr %4, align 4, !dbg !10192\l  br label %28, !dbg !10192\l}"];
+	Node0xbff3d4730 -> Node0xbff3d47d0;
+	Node0xbff3d4780 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{15:\l|  %16 = load ptr, ptr %5, align 8, !dbg !10193\l  %17 = load ptr, ptr %6, align 8, !dbg !10194\l  %18 = load i32, ptr %7, align 4, !dbg !10195\l  %19 = call i32 @BZ2_bzRead(ptr noundef %8, ptr noundef %16, ptr noundef %17,\l... i32 noundef %18), !dbg !10196\l  store i32 %19, ptr %9, align 4, !dbg !10197\l  %20 = load i32, ptr %8, align 4, !dbg !10198\l  %21 = icmp eq i32 %20, 0, !dbg !10200\l  br i1 %21, label %25, label %22, !dbg !10201\l|{<s0>T|<s1>F}}"];
+	Node0xbff3d4780:s0 -> Node0xbff3d4820;
+	Node0xbff3d4780:s1 -> Node0xbff3d4870;
+	Node0xbff3d4870 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170", fontname="Courier",label="{22:\l|  %23 = load i32, ptr %8, align 4, !dbg !10202\l  %24 = icmp eq i32 %23, 4, !dbg !10203\l  br i1 %24, label %25, label %27, !dbg !10201\l|{<s0>T|<s1>F}}"];
+	Node0xbff3d4870:s0 -> Node0xbff3d4820;
+	Node0xbff3d4870:s1 -> Node0xbff3d48c0;
+	Node0xbff3d4820 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170", fontname="Courier",label="{25:\l|  %26 = load i32, ptr %9, align 4, !dbg !10204\l  store i32 %26, ptr %4, align 4, !dbg !10206\l  br label %28, !dbg !10206\l}"];
+	Node0xbff3d4820 -> Node0xbff3d47d0;
+	Node0xbff3d48c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770", fontname="Courier",label="{27:\l|  store i32 -1, ptr %4, align 4, !dbg !10207\l  br label %28, !dbg !10207\l}"];
+	Node0xbff3d48c0 -> Node0xbff3d47d0;
+	Node0xbff3d47d0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{28:\l|  %29 = load i32, ptr %4, align 4, !dbg !10209\l  ret i32 %29, !dbg !10209\l}"];
+}

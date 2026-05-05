@@ -1,0 +1,5 @@
+digraph "CFG for 'bz_config_ok' function" {
+	label="CFG for 'bz_config_ok' function";
+
+	Node0xbff32e300 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{0:\l|  ret i32 1, !dbg !7212\l}"];
+}

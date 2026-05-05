@@ -1,0 +1,10 @@
+digraph "CFG for 'fileExists' function" {
+	label="CFG for 'fileExists' function";
+
+	Node0xbff46cd70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{1:\l|  %2 = alloca ptr, align 8\l  %3 = alloca ptr, align 8\l  %4 = alloca i8, align 1\l  store ptr %0, ptr %2, align 8\l  %5 = load ptr, ptr %2, align 8, !dbg !14069\l  %6 = call ptr @\"\\01_fopen\"(ptr noundef %5, ptr noundef @.str.108), !dbg\l... !14070\l  store ptr %6, ptr %3, align 8, !dbg !14068\l  %7 = load ptr, ptr %3, align 8, !dbg !14073\l  %8 = icmp ne ptr %7, null, !dbg !14074\l  %9 = zext i1 %8 to i32, !dbg !14074\l  %10 = trunc i32 %9 to i8, !dbg !14075\l  store i8 %10, ptr %4, align 1, !dbg !14072\l  %11 = load ptr, ptr %3, align 8, !dbg !14076\l  %12 = icmp ne ptr %11, null, !dbg !14078\l  br i1 %12, label %13, label %16, !dbg !14078\l|{<s0>T|<s1>F}}"];
+	Node0xbff46cd70:s0 -> Node0xbff46cdc0;
+	Node0xbff46cd70:s1 -> Node0xbff46ce10;
+	Node0xbff46cdc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70", fontname="Courier",label="{13:\l|  %14 = load ptr, ptr %3, align 8, !dbg !14079\l  %15 = call i32 @fclose(ptr noundef %14), !dbg !14080\l  br label %16, !dbg !14080\l}"];
+	Node0xbff46cdc0 -> Node0xbff46ce10;
+	Node0xbff46ce10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{16:\l|  %17 = load i8, ptr %4, align 1, !dbg !14081\l  ret i8 %17, !dbg !14082\l}"];
+}

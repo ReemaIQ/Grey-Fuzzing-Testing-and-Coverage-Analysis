@@ -1,0 +1,10 @@
+digraph "CFG for 'BZ2_bz__AssertH__fail' function" {
+	label="CFG for 'BZ2_bz__AssertH__fail' function";
+
+	Node0xbff1dc550 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{1:\l|  %2 = alloca i32, align 4\l  store i32 %0, ptr %2, align 4\l  %3 = load ptr, ptr @__stderrp, align 8, !dbg !2193\l  %4 = load i32, ptr %2, align 4, !dbg !2194\l  %5 = call ptr @BZ2_bzlibVersion(), !dbg !2195\l  %6 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %3, ptr noundef @.str.6,\l... i32 noundef %4, ptr noundef %5) #12, !dbg !2196\l  %7 = load i32, ptr %2, align 4, !dbg !2197\l  %8 = icmp eq i32 %7, 1007, !dbg !2199\l  br i1 %8, label %9, label %12, !dbg !2199\l|{<s0>T|<s1>F}}"];
+	Node0xbff1dc550:s0 -> Node0xbff1dc5a0;
+	Node0xbff1dc550:s1 -> Node0xbff1dc5f0;
+	Node0xbff1dc5a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{9:\l|  %10 = load ptr, ptr @__stderrp, align 8, !dbg !2200\l  %11 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %10, ptr noundef\l... @.str.7) #12, !dbg !2202\l  br label %12, !dbg !2203\l}"];
+	Node0xbff1dc5a0 -> Node0xbff1dc5f0;
+	Node0xbff1dc5f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{12:\l|  call void @exit(i32 noundef 3) #13, !dbg !2204\l  unreachable, !dbg !2204\l}"];
+}

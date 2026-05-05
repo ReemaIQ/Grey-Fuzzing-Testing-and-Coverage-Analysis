@@ -1,0 +1,9 @@
+digraph "CFG for 'saveInputFileMetaInfo' function" {
+	label="CFG for 'saveInputFileMetaInfo' function";
+
+	Node0xbff46d360 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{1:\l|  %2 = alloca ptr, align 8\l  %3 = alloca i32, align 4\l  store ptr %0, ptr %2, align 8\l  %4 = load ptr, ptr %2, align 8, !dbg !14161\l  %5 = call i32 @\"\\01_stat\"(ptr noundef %4, ptr noundef @fileMetaInfo), !dbg\l... !14162\l  store i32 %5, ptr %3, align 4, !dbg !14163\l  %6 = load i32, ptr %3, align 4, !dbg !14164\l  %7 = icmp ne i32 %6, 0, !dbg !14167\l  br i1 %7, label %8, label %9, !dbg !14167\l|{<s0>T|<s1>F}}"];
+	Node0xbff46d360:s0 -> Node0xbff46d3b0;
+	Node0xbff46d360:s1 -> Node0xbff46d400;
+	Node0xbff46d3b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70", fontname="Courier",label="{8:\l|  call void @ioError() #12, !dbg !14167\l  unreachable, !dbg !14167\l}"];
+	Node0xbff46d400 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{9:\l|  ret void, !dbg !14168\l}"];
+}

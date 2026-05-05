@@ -1,0 +1,12 @@
+digraph "CFG for 'BZ2_bzwrite' function" {
+	label="CFG for 'BZ2_bzwrite' function";
+
+	Node0xbff3d4910 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{3:\l|  %4 = alloca i32, align 4\l  %5 = alloca ptr, align 8\l  %6 = alloca ptr, align 8\l  %7 = alloca i32, align 4\l  %8 = alloca i32, align 4\l  store ptr %0, ptr %5, align 8\l  store ptr %1, ptr %6, align 8\l  store i32 %2, ptr %7, align 4\l  %9 = load ptr, ptr %5, align 8, !dbg !10219\l  %10 = load ptr, ptr %6, align 8, !dbg !10220\l  %11 = load i32, ptr %7, align 4, !dbg !10221\l  call void @BZ2_bzWrite(ptr noundef %8, ptr noundef %9, ptr noundef %10, i32\l... noundef %11), !dbg !10222\l  %12 = load i32, ptr %8, align 4, !dbg !10223\l  %13 = icmp eq i32 %12, 0, !dbg !10225\l  br i1 %13, label %14, label %16, !dbg !10225\l|{<s0>T|<s1>F}}"];
+	Node0xbff3d4910:s0 -> Node0xbff3d4960;
+	Node0xbff3d4910:s1 -> Node0xbff3d49b0;
+	Node0xbff3d4960 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170", fontname="Courier",label="{14:\l|  %15 = load i32, ptr %7, align 4, !dbg !10226\l  store i32 %15, ptr %4, align 4, !dbg !10228\l  br label %17, !dbg !10228\l}"];
+	Node0xbff3d4960 -> Node0xbff3d4a00;
+	Node0xbff3d49b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70", fontname="Courier",label="{16:\l|  store i32 -1, ptr %4, align 4, !dbg !10229\l  br label %17, !dbg !10229\l}"];
+	Node0xbff3d49b0 -> Node0xbff3d4a00;
+	Node0xbff3d4a00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{17:\l|  %18 = load i32, ptr %4, align 4, !dbg !10231\l  ret i32 %18, !dbg !10231\l}"];
+}

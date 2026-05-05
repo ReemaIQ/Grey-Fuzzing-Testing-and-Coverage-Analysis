@@ -1,0 +1,5 @@
+digraph "CFG for 'mySignalCatcher' function" {
+	label="CFG for 'mySignalCatcher' function";
+
+	Node0xbff3ede50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{1:\l|  %2 = alloca i32, align 4\l  store i32 %0, ptr %2, align 4\l  %3 = load ptr, ptr @__stderrp, align 8, !dbg !11150\l  %4 = load ptr, ptr @progName, align 8, !dbg !11151\l  %5 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %3, ptr noundef @.str.94,\l... ptr noundef %4) #12, !dbg !11152\l  call void @cleanUpAndFail(i32 noundef 1) #13, !dbg !11153\l  unreachable, !dbg !11153\l}"];
+}

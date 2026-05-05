@@ -1,0 +1,21 @@
+digraph "CFG for 'uInt64_toAscii' function" {
+	label="CFG for 'uInt64_toAscii' function";
+
+	Node0xbff46ead0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{2:\l|  %3 = alloca ptr, align 8\l  %4 = alloca ptr, align 8\l  %5 = alloca i32, align 4\l  %6 = alloca i32, align 4\l  %7 = alloca [32 x i8], align 1\l  %8 = alloca i32, align 4\l  %9 = alloca %struct.UInt64, align 1\l  store ptr %0, ptr %3, align 8\l  store ptr %1, ptr %4, align 8\l  store i32 0, ptr %8, align 4, !dbg !14561\l  %10 = load ptr, ptr %4, align 8, !dbg !14564\l  call void @llvm.memcpy.p0.p0.i64(ptr align 1 %9, ptr align 1 %10, i64 8, i1\l... false), !dbg !14565\l  br label %11, !dbg !14566\l}"];
+	Node0xbff46ead0 -> Node0xbff46eb20;
+	Node0xbff46eb20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{11:\l|  %12 = call i32 @uInt64_qrm10(ptr noundef %9), !dbg !14567\l  store i32 %12, ptr %6, align 4, !dbg !14569\l  %13 = load i32, ptr %6, align 4, !dbg !14570\l  %14 = add nsw i32 %13, 48, !dbg !14571\l  %15 = trunc i32 %14 to i8, !dbg !14570\l  %16 = load i32, ptr %8, align 4, !dbg !14572\l  %17 = sext i32 %16 to i64, !dbg !14573\l  %18 = getelementptr inbounds [32 x i8], ptr %7, i64 0, i64 %17, !dbg !14573\l  store i8 %15, ptr %18, align 1, !dbg !14574\l  %19 = load i32, ptr %8, align 4, !dbg !14575\l  %20 = add nsw i32 %19, 1, !dbg !14575\l  store i32 %20, ptr %8, align 4, !dbg !14575\l  br label %21, !dbg !14576\l}"];
+	Node0xbff46eb20 -> Node0xbff46eb70;
+	Node0xbff46eb70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{21:\l|  %22 = call zeroext i8 @uInt64_isZero(ptr noundef %9), !dbg !14577\l  %23 = icmp ne i8 %22, 0, !dbg !14578\l  %24 = xor i1 %23, true, !dbg !14578\l  br i1 %24, label %11, label %25, !dbg !14576, !llvm.loop !14579\l|{<s0>T|<s1>F}}"];
+	Node0xbff46eb70:s0 -> Node0xbff46eb20;
+	Node0xbff46eb70:s1 -> Node0xbff46ebc0;
+	Node0xbff46ebc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{25:\l|  %26 = load ptr, ptr %3, align 8, !dbg !14581\l  %27 = load i32, ptr %8, align 4, !dbg !14582\l  %28 = sext i32 %27 to i64, !dbg !14581\l  %29 = getelementptr inbounds i8, ptr %26, i64 %28, !dbg !14581\l  store i8 0, ptr %29, align 1, !dbg !14583\l  store i32 0, ptr %5, align 4, !dbg !14584\l  br label %30, !dbg !14586\l}"];
+	Node0xbff46ebc0 -> Node0xbff46ec10;
+	Node0xbff46ec10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{30:\l|  %31 = load i32, ptr %5, align 4, !dbg !14587\l  %32 = load i32, ptr %8, align 4, !dbg !14589\l  %33 = icmp slt i32 %31, %32, !dbg !14590\l  br i1 %33, label %34, label %49, !dbg !14591\l|{<s0>T|<s1>F}}"];
+	Node0xbff46ec10:s0 -> Node0xbff46ec60;
+	Node0xbff46ec10:s1 -> Node0xbff46ecb0;
+	Node0xbff46ec60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{34:\l|  %35 = load i32, ptr %8, align 4, !dbg !14592\l  %36 = load i32, ptr %5, align 4, !dbg !14593\l  %37 = sub nsw i32 %35, %36, !dbg !14594\l  %38 = sub nsw i32 %37, 1, !dbg !14595\l  %39 = sext i32 %38 to i64, !dbg !14596\l  %40 = getelementptr inbounds [32 x i8], ptr %7, i64 0, i64 %39, !dbg !14596\l  %41 = load i8, ptr %40, align 1, !dbg !14596\l  %42 = load ptr, ptr %3, align 8, !dbg !14597\l  %43 = load i32, ptr %5, align 4, !dbg !14598\l  %44 = sext i32 %43 to i64, !dbg !14597\l  %45 = getelementptr inbounds i8, ptr %42, i64 %44, !dbg !14597\l  store i8 %41, ptr %45, align 1, !dbg !14599\l  br label %46, !dbg !14597\l}"];
+	Node0xbff46ec60 -> Node0xbff46ed00;
+	Node0xbff46ed00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{46:\l|  %47 = load i32, ptr %5, align 4, !dbg !14600\l  %48 = add nsw i32 %47, 1, !dbg !14600\l  store i32 %48, ptr %5, align 4, !dbg !14600\l  br label %30, !dbg !14601, !llvm.loop !14602\l}"];
+	Node0xbff46ed00 -> Node0xbff46ec10;
+	Node0xbff46ecb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{49:\l|  ret void, !dbg !14604\l}"];
+}

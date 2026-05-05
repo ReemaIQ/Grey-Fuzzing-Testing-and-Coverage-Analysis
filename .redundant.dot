@@ -1,0 +1,5 @@
+digraph "CFG for 'redundant' function" {
+	label="CFG for 'redundant' function";
+
+	Node0xbff3ede00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{1:\l|  %2 = alloca ptr, align 8\l  store ptr %0, ptr %2, align 8\l  %3 = load ptr, ptr @__stderrp, align 8, !dbg !11142\l  %4 = load ptr, ptr @progName, align 8, !dbg !11143\l  %5 = load ptr, ptr %2, align 8, !dbg !11144\l  %6 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %3, ptr noundef @.str.93,\l... ptr noundef %4, ptr noundef %5) #12, !dbg !11145\l  ret void, !dbg !11146\l}"];
+}

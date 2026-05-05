@@ -1,0 +1,30 @@
+digraph "CFG for 'BZ2_bzclose' function" {
+	label="CFG for 'BZ2_bzclose' function";
+
+	Node0xbff3d4aa0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{1:\l|  %2 = alloca ptr, align 8\l  %3 = alloca i32, align 4\l  %4 = alloca ptr, align 8\l  store ptr %0, ptr %2, align 8\l  %5 = load ptr, ptr %2, align 8, !dbg !10247\l  %6 = getelementptr inbounds nuw %struct.bzFile, ptr %5, i32 0, i32 0, !dbg\l... !10248\l  %7 = load ptr, ptr %6, align 8, !dbg !10248\l  store ptr %7, ptr %4, align 8, !dbg !10246\l  %8 = load ptr, ptr %2, align 8, !dbg !10249\l  %9 = icmp eq ptr %8, null, !dbg !10251\l  br i1 %9, label %10, label %11, !dbg !10251\l|{<s0>T|<s1>F}}"];
+	Node0xbff3d4aa0:s0 -> Node0xbff3d4af0;
+	Node0xbff3d4aa0:s1 -> Node0xbff3d4b40;
+	Node0xbff3d4af0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170", fontname="Courier",label="{10:\l|  br label %36, !dbg !10252\l}"];
+	Node0xbff3d4af0 -> Node0xbff3d4b90;
+	Node0xbff3d4b40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70", fontname="Courier",label="{11:\l|  %12 = load ptr, ptr %2, align 8, !dbg !10254\l  %13 = getelementptr inbounds nuw %struct.bzFile, ptr %12, i32 0, i32 3, !dbg\l... !10256\l  %14 = load i8, ptr %13, align 4, !dbg !10256\l  %15 = icmp ne i8 %14, 0, !dbg !10257\l  br i1 %15, label %16, label %23, !dbg !10257\l|{<s0>T|<s1>F}}"];
+	Node0xbff3d4b40:s0 -> Node0xbff3d4be0;
+	Node0xbff3d4b40:s1 -> Node0xbff3d4c30;
+	Node0xbff3d4be0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{16:\l|  %17 = load ptr, ptr %2, align 8, !dbg !10258\l  call void @BZ2_bzWriteClose(ptr noundef %3, ptr noundef %17, i32 noundef 0,\l... ptr noundef null, ptr noundef null), !dbg !10260\l  %18 = load i32, ptr %3, align 4, !dbg !10261\l  %19 = icmp ne i32 %18, 0, !dbg !10263\l  br i1 %19, label %20, label %22, !dbg !10263\l|{<s0>T|<s1>F}}"];
+	Node0xbff3d4be0:s0 -> Node0xbff3d4c80;
+	Node0xbff3d4be0:s1 -> Node0xbff3d4cd0;
+	Node0xbff3d4c80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470", fontname="Courier",label="{20:\l|  %21 = load ptr, ptr %2, align 8, !dbg !10264\l  call void @BZ2_bzWriteClose(ptr noundef null, ptr noundef %21, i32 noundef\l... 1, ptr noundef null, ptr noundef null), !dbg !10266\l  br label %22, !dbg !10267\l}"];
+	Node0xbff3d4c80 -> Node0xbff3d4cd0;
+	Node0xbff3d4cd0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{22:\l|  br label %25, !dbg !10268\l}"];
+	Node0xbff3d4cd0 -> Node0xbff3d4d20;
+	Node0xbff3d4c30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470", fontname="Courier",label="{23:\l|  %24 = load ptr, ptr %2, align 8, !dbg !10269\l  call void @BZ2_bzReadClose(ptr noundef %3, ptr noundef %24), !dbg !10271\l  br label %25\l}"];
+	Node0xbff3d4c30 -> Node0xbff3d4d20;
+	Node0xbff3d4d20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70", fontname="Courier",label="{25:\l|  %26 = load ptr, ptr %4, align 8, !dbg !10272\l  %27 = load ptr, ptr @__stdinp, align 8, !dbg !10274\l  %28 = icmp ne ptr %26, %27, !dbg !10275\l  br i1 %28, label %29, label %36, !dbg !10276\l|{<s0>T|<s1>F}}"];
+	Node0xbff3d4d20:s0 -> Node0xbff3d4d70;
+	Node0xbff3d4d20:s1 -> Node0xbff3d4b90;
+	Node0xbff3d4d70 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{29:\l|  %30 = load ptr, ptr %4, align 8, !dbg !10277\l  %31 = load ptr, ptr @__stdoutp, align 8, !dbg !10278\l  %32 = icmp ne ptr %30, %31, !dbg !10279\l  br i1 %32, label %33, label %36, !dbg !10276\l|{<s0>T|<s1>F}}"];
+	Node0xbff3d4d70:s0 -> Node0xbff3d4dc0;
+	Node0xbff3d4d70:s1 -> Node0xbff3d4b90;
+	Node0xbff3d4dc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470", fontname="Courier",label="{33:\l|  %34 = load ptr, ptr %4, align 8, !dbg !10280\l  %35 = call i32 @fclose(ptr noundef %34), !dbg !10282\l  br label %36, !dbg !10283\l}"];
+	Node0xbff3d4dc0 -> Node0xbff3d4b90;
+	Node0xbff3d4b90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{36:\l|  ret void, !dbg !10284\l}"];
+}

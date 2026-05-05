@@ -1,0 +1,5 @@
+digraph "CFG for 'license' function" {
+	label="CFG for 'license' function";
+
+	Node0xbff3edd60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{0:\l|  %1 = load ptr, ptr @__stderrp, align 8, !dbg !11125\l  %2 = call ptr @BZ2_bzlibVersion(), !dbg !11126\l  %3 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %1, ptr noundef @.str.91,\l... ptr noundef %2) #12, !dbg !11127\l  ret void, !dbg !11128\l}"];
+}

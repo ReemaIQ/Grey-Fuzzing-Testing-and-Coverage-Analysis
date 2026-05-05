@@ -1,0 +1,19 @@
+digraph "CFG for 'BZ2_indexIntoF' function" {
+	label="CFG for 'BZ2_indexIntoF' function";
+
+	Node0xbff32d720 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{2:\l|  %3 = alloca i32, align 4\l  %4 = alloca ptr, align 8\l  %5 = alloca i32, align 4\l  %6 = alloca i32, align 4\l  %7 = alloca i32, align 4\l  store i32 %0, ptr %3, align 4\l  store ptr %1, ptr %4, align 8\l  store i32 0, ptr %5, align 4, !dbg !6973\l  store i32 256, ptr %6, align 4, !dbg !6974\l  br label %8, !dbg !6975\l}"];
+	Node0xbff32d720 -> Node0xbff32d770;
+	Node0xbff32d770 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{8:\l|  %9 = load i32, ptr %5, align 4, !dbg !6976\l  %10 = load i32, ptr %6, align 4, !dbg !6978\l  %11 = add nsw i32 %9, %10, !dbg !6979\l  %12 = ashr i32 %11, 1, !dbg !6980\l  store i32 %12, ptr %7, align 4, !dbg !6981\l  %13 = load i32, ptr %3, align 4, !dbg !6982\l  %14 = load ptr, ptr %4, align 8, !dbg !6984\l  %15 = load i32, ptr %7, align 4, !dbg !6985\l  %16 = sext i32 %15 to i64, !dbg !6984\l  %17 = getelementptr inbounds i32, ptr %14, i64 %16, !dbg !6984\l  %18 = load i32, ptr %17, align 4, !dbg !6984\l  %19 = icmp sge i32 %13, %18, !dbg !6986\l  br i1 %19, label %20, label %22, !dbg !6986\l|{<s0>T|<s1>F}}"];
+	Node0xbff32d770:s0 -> Node0xbff32d7c0;
+	Node0xbff32d770:s1 -> Node0xbff32d810;
+	Node0xbff32d7c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{20:\l|  %21 = load i32, ptr %7, align 4, !dbg !6987\l  store i32 %21, ptr %5, align 4, !dbg !6988\l  br label %24, !dbg !6989\l}"];
+	Node0xbff32d7c0 -> Node0xbff32d860;
+	Node0xbff32d810 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{22:\l|  %23 = load i32, ptr %7, align 4, !dbg !6990\l  store i32 %23, ptr %6, align 4, !dbg !6991\l  br label %24\l}"];
+	Node0xbff32d810 -> Node0xbff32d860;
+	Node0xbff32d860 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{24:\l|  br label %25, !dbg !6992\l}"];
+	Node0xbff32d860 -> Node0xbff32d8b0;
+	Node0xbff32d8b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{25:\l|  %26 = load i32, ptr %6, align 4, !dbg !6993\l  %27 = load i32, ptr %5, align 4, !dbg !6994\l  %28 = sub nsw i32 %26, %27, !dbg !6995\l  %29 = icmp ne i32 %28, 1, !dbg !6996\l  br i1 %29, label %8, label %30, !dbg !6992, !llvm.loop !6997\l|{<s0>T|<s1>F}}"];
+	Node0xbff32d8b0:s0 -> Node0xbff32d770;
+	Node0xbff32d8b0:s1 -> Node0xbff32d900;
+	Node0xbff32d900 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{30:\l|  %31 = load i32, ptr %5, align 4, !dbg !6999\l  ret i32 %31, !dbg !7000\l}"];
+}

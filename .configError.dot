@@ -1,0 +1,5 @@
+digraph "CFG for 'configError' function" {
+	label="CFG for 'configError' function";
+
+	Node0xbff46ed50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{0:\l|  %1 = load ptr, ptr @__stderrp, align 8, !dbg !14606\l  %2 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %1, ptr noundef\l... @.str.118) #12, !dbg !14607\l  call void @setExit(i32 noundef 3), !dbg !14608\l  %3 = load i32, ptr @exitValue, align 4, !dbg !14609\l  call void @exit(i32 noundef %3) #13, !dbg !14610\l  unreachable, !dbg !14610\l}"];
+}

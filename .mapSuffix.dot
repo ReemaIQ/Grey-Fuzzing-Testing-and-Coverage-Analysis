@@ -1,0 +1,12 @@
+digraph "CFG for 'mapSuffix' function" {
+	label="CFG for 'mapSuffix' function";
+
+	Node0xbff46f200 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{3:\l|  %4 = alloca i8, align 1\l  %5 = alloca ptr, align 8\l  %6 = alloca ptr, align 8\l  %7 = alloca ptr, align 8\l  store ptr %0, ptr %5, align 8\l  store ptr %1, ptr %6, align 8\l  store ptr %2, ptr %7, align 8\l  %8 = load ptr, ptr %5, align 8, !dbg !14690\l  %9 = load ptr, ptr %6, align 8, !dbg !14692\l  %10 = call zeroext i8 @hasSuffix(ptr noundef %8, ptr noundef %9), !dbg !14693\l  %11 = icmp ne i8 %10, 0, !dbg !14693\l  br i1 %11, label %13, label %12, !dbg !14694\l|{<s0>T|<s1>F}}"];
+	Node0xbff46f200:s0 -> Node0xbff46f250;
+	Node0xbff46f200:s1 -> Node0xbff46f2a0;
+	Node0xbff46f2a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170", fontname="Courier",label="{12:\l|  store i8 0, ptr %4, align 1, !dbg !14695\l  br label %26, !dbg !14695\l}"];
+	Node0xbff46f2a0 -> Node0xbff46f2f0;
+	Node0xbff46f250 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70", fontname="Courier",label="{13:\l|  %14 = load ptr, ptr %5, align 8, !dbg !14696\l  %15 = load ptr, ptr %5, align 8, !dbg !14697\l  %16 = call i64 @strlen(ptr noundef %15) #12, !dbg !14698\l  %17 = load ptr, ptr %6, align 8, !dbg !14699\l  %18 = call i64 @strlen(ptr noundef %17) #12, !dbg !14700\l  %19 = sub i64 %16, %18, !dbg !14701\l  %20 = getelementptr inbounds nuw i8, ptr %14, i64 %19, !dbg !14696\l  store i8 0, ptr %20, align 1, !dbg !14702\l  %21 = load ptr, ptr %5, align 8, !dbg !14703\l  %22 = load ptr, ptr %7, align 8, !dbg !14704\l  %23 = load ptr, ptr %5, align 8, !dbg !14703\l  %24 = call i64 @llvm.objectsize.i64.p0(ptr %23, i1 false, i1 true, i1\l... false), !dbg !14705\l  %25 = call ptr @__strcat_chk(ptr noundef %21, ptr noundef %22, i64 noundef\l... %24) #12, !dbg !14705\l  store i8 1, ptr %4, align 1, !dbg !14706\l  br label %26, !dbg !14706\l}"];
+	Node0xbff46f250 -> Node0xbff46f2f0;
+	Node0xbff46f2f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{26:\l|  %27 = load i8, ptr %4, align 1, !dbg !14707\l  ret i8 %27, !dbg !14707\l}"];
+}
