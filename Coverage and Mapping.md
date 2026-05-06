@@ -34,4 +34,8 @@ python2 ~/Desktop/FuzzingProject/afl-cov/afl-cov \
 ``` bash
 python3 annotate_uncompressStream_cfg.py
 python3 annotate_BZ2_bzWrite_cfg.py
-``` 
+```
+### Transform dot file into png
+```bash
+dot -Tpng output_annotated.dot -o cfg.png
+```
