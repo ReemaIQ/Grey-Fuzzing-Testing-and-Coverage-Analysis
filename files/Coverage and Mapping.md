@@ -43,12 +43,15 @@ dot -Tpng output_annotated.dot -o cfg.png
 ### Now to map the callgraph we will collect the functions used in bzWrite and uncompressStream
 ```bash
 # Find the functions and how many times they were hit
-grep "DA:" compress_cov/lcov/trace.lcov_info > compress_hits.txt
-grep "DA:" decompress_cov/lcov/trace.lcov_info > decompress_hits.txt
+grep "^FNDA" ~/Desktop/FuzzingProject/compress/output_compress/cov/lcov/trace.lcov_info \
+  | awk -F'[:,]' '$2 > 0 {print $3}' | sort -u > ~/Desktop/FuzzingProject/compress_set.txt
 
-# Extract function names only
-grep "^FNDA" compress_hits.txt | cut -d',' -f2 | sort -u > compress_set.txt
-grep "^FNDA" decompress_hits.txt | cut -d',' -f2 | sort -u > decompress_set.txt
+grep "^FNDA" ~/Desktop/FuzzingProject/decompress/output_decompress/cov/lcov/trace.lcov_info \
+  | awk -F'[:,]' '$2 > 0 {print $3}' | sort -u > ~/Desktop/FuzzingProject/decompress_set.txt
+
+# Check overlap
+comm -12 \
+  <(sort ~/Desktop/FuzzingProject/compress_set.txt) \
 ```
 
 ### To map coverage run the python script
