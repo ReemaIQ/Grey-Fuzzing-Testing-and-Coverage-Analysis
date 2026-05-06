@@ -597,7 +597,7 @@ The table below summarizes the source-based coverage results collected from the 
 ![afl-cov_decompress1.png](./images/afl-cov_decompress1.png)
 > afl-cov LCOV HTML report for the decompression campaign. Summary view showing 32.4% line coverage (890 / 2,744) and 35.8% function coverage (38 / 106). Date: 2026-05-05 21:20:20.
 
-> [INSERT FIGURE 9d: afl-cov-decompress2.png]
+
 ![afl-cov-decompress2.png](./images/afl-cov-decompress2.png)
 > Function-level hit count list for the decompression campaign, sorted by frequency. Selected function hits: uncompressStream: 374 -- BZ2_decompress: 506 -- BZ2_bzDecompressInit: 388 -- BZ2_bzReadOpen: 388 -- BZ2_bzRead: 14,224 -- BZ2_bzReadGetUnused: 14 -- crcError: 266 -- compressedStreamEOF: 101 -- myfeof: 15,992.
 
