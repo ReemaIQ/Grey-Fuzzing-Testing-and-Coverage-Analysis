@@ -123,7 +123,7 @@ The compression loop drives the bzip2 state machine by calling `BZ2_bzCompress` 
 
 #### CFG -- Coverage Annotated
 
-![BZ2_bzWrite_cov_cfg](./images/BZ2_bzWrite_cov_cfg.png)
+![BZ2_bzWrite_cov_cfg](./images/BZ2_bzWrite_annotated.png)
 > Coverage-annotated CFG for BZ2_bzWrite from the compression campaign. Green nodes were executed (the entry block, parameter checks, and compression loop). Red nodes were not executed (all error-handling branches). Each node shows its basic block number and hit count.
 
 ---
