@@ -1074,7 +1074,7 @@ During the decompression campaign, `BZ2_bzWrite` received 0 hits. This is expect
 Lines not covered in either campaign: the error-handling branches at lines 4377 (BZ_PARAM_ERROR), 4379 (BZ_SEQUENCE_ERROR), 4381 (BZ_IO_ERROR), 4384 (len == 0 early return), 4394 (compress error return), and 4397--4401 (fwrite error handling). These branches require environmental conditions such as null pointers or file system failures that cannot be triggered by mutating the content of an input file.
 
 
-![BZ2_bzWrite_cov_cfg](./images/BZ2_bzWrite_cov_cfg.png)
+![BZ2_bzWrite_cov_cfg](./images/BZ2_bzWrite_annotated.png)
 > Coverage-annotated CFG for BZ2_bzWrite. Green nodes were executed during the compression campaign. Red nodes are error-handling basic blocks that were not reached by either campaign. Each node shows its basic block number and hit count.
 
 ---
