@@ -219,7 +219,37 @@ Flag explanation:
 Note: The initial command used `-z @@` only and showed an "odd, check syntax!" warning in AFL++. This was resolved by adding `-k -f` flags so bzip2 does not attempt to delete or reject the input file during fuzzing.
 
 **Seed files used:**
-- `seeds_compress/seed1.txt`: plain text string "hello world this is a test file for bzip2 compression"
+```bash
+# Small text
+echo "Hello World" > seeds_compress/s1.txt
+
+# Repeated patterns (tests RLE encoding in bzip2)
+python3 -c "print('A'*100)" > seeds_compress/s2.txt
+python3 -c "print('ABCD'*50)" > seeds_compress/s3.txt
+
+# Long text with varied characters
+python3 -c "import string; print(string.printable*10)" > seeds_compress/s4.txt
+
+# Binary-like content
+python3 -c "import os; open('seeds_compress/s5.bin','wb').write(os.urandom(512))"
+python3 -c "import os; open('seeds_compress/s6.bin','wb').write(os.urandom(1024))"
+
+# Empty and tiny files (edge cases)
+echo "" > seeds_compress/s7.txt
+echo "A" > seeds_compress/s8.txt
+
+# Large file (stress test)
+python3 -c "print('Hello World\n'*500)" > seeds_compress/s9.txt
+
+# Null bytes and special characters
+python3 -c "open('seeds_compress/s10.bin','wb').write(bytes(range(256)))"
+
+# Structured data (CSV-like)
+echo "name,age,city\nJohn,25,NYC\nJane,30,LA" > seeds_compress/s11.txt
+
+# XML-like structure
+echo "<root><item>test</item><item>data</item></root>" > seeds_compress/s12.txt
+```
 
 **Results:**
 
